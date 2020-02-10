@@ -1,6 +1,6 @@
-* Title: *Desriptive title*
+* Title: *Descriptive title*
 * Champion: *@github handle/email@*
-* Converstaion (optional): *thread on radicle.community*
+* Conversation (optional): *thread on radicle.community*
 * References:
   * list of
   * external resources
