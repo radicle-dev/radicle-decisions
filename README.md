@@ -17,9 +17,9 @@ it was ultimately rejected.
 
 The proposal process is meant to drive cross-cutting engineering improvements
 across Radicle. We want the bar for a proposal to be as low as possible - to
-encourage positive change and alginment among engineers. Therefore we see any
+encourage positive change and alignment among engineers. Therefore we see any
 proposal as valid as long as an engineer inside of Radicle sees the need to
-formalise or decide on a certain aspect on development. It can, but doesn't
+formalise or decide on a certain aspect off development. It can, but doesn't
 need to be, originate from a discussion on
 [radicle.community](https://radicle.community). A discussion should be lifted
 into a proposal when enough added benefit has surfaced.
@@ -33,10 +33,10 @@ into a proposal when enough added benefit has surfaced.
 
 ### Process
 * Open a PR with a new proposal copied from the [template]()
-* Assign yourself - as the assignee is in charge of seeing the proposal through
+* Assign yourself - as the assignee is in charge to see the proposal through
 * Request `radicle-dev/engineering` as reviewers
 * Announce new proposal in the [development
   section](https://radicle.community/c/development-discussion/9)
-* Keep the conversation in the PR to not loose information
+* Keep the conversation in the PR to not lose information
 * Incorporate feedback
 * Get quorum for approval
