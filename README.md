@@ -34,6 +34,7 @@ into a proposal when enough added benefit has surfaced.
 ### Process
 * Open a PR with a new proposal copied from the [template]()
 * Assign yourself - as the assignee is in charge of seeing the proposal through
+* Request `radicle-dev/engineering` as reviewers
 * Announce new proposal in the [development
   section](https://radicle.community/c/development-discussion/9)
 * Keep the conversation in the PR to not loose information
