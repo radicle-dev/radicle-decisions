@@ -19,8 +19,8 @@ The proposal process is meant to drive cross-cutting engineering improvements
 across Radicle. We want the bar for a proposal to be as low as possible - to
 encourage positive change and alignment among engineers. Therefore we see any
 proposal as valid as long as an engineer inside of Radicle sees the need to
-formalise or decide on a certain aspect off development. It can, but doesn't
-need to be, originate from a discussion on
+formalise or decide on a certain aspect of development. It can, but doesn't
+need to originate from a discussion on
 [radicle.community](https://radicle.community). A discussion should be lifted
 into a proposal when enough added benefit has surfaced.
 
