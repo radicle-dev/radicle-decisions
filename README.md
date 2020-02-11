@@ -32,7 +32,7 @@ into a proposal when enough added benefit has surfaced.
 * ecosystem
 
 ### Process
-* Open a PR with a new proposal copied from the [template]()
+* Open a PR with a new proposal copied from the [template](https://github.com/radicle-dev/radicle-decisions/blob/master/proposals/0000-template.md)
 * Assign yourself - as the assignee is in charge to see the proposal through
 * Request `radicle-dev/engineering` as reviewers
 * Announce new proposal in the [development
