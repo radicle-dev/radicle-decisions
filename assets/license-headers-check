@@ -1,15 +1,44 @@
 #!/usr/bin/env bash
 #
-# Iterates over all rust source files and ensures they start with the license
-# header as per the `.license-header` file at the root of the repository.
+# Iterates over all source files and ensures they start with the license.
+# If run with the `--fix` option license headers are added if they are missing.
 
 set -euo pipefail
-IFS=$'\n'
-
 shopt -s globstar extglob
-for file in */+(src|tests|examples)/**/*.rs
-do
-    rustfmt --config license_template_path=".license-header" --color never --quiet --check "$file" || {
-        sed -i -e '1r.license-header' -e '1{h;d}' -e '2{x;G}' "$file"
-    }
+
+# CONFIGURE THE FOLLOWING VARIABLES BEFORE USAGE
+project_name="<project>"
+contributors_default="The Radicle Foundation <hello@radicle.foundation>"
+# OR
+contributors_default="Monadic GmbH <company@monadic.xyz>"
+files='@(src|tests|examples)/**/*.rs' # EXAMPLE GLOB FOR A RUST PROJECT
+
+template="\
+// $project_name is Copyright © %s
+// %s
+//
+// This file is part of $project_name,
+// distributed under the GPL v3 with Radicle Linking Exception.
+// For full terms see the included LICENSE file
+"
+pattern=$(printf "$template*" '+([-, 0-9])' '?*')
+
+for file in $files; do
+    body=$(<"$file")
+    if [[ "$body" = $pattern ]]; then
+        continue
+    fi
+    if [[ "${1:-}" != "--fix" ]]; then
+        echo "License header missing for $file."
+        echo "Rerun with --fix to add license header."
+        exit 1
+    fi
+    if [ ! "${contributors:-}" ]; then
+        echo "Enter contributor name and contact to use when" \
+            "adding the missing headers [$contributors_default]: "
+        read contributors
+        contributors=${contributors:-$contributors_default}
+    fi
+    echo "Adding license header to $file"
+    printf "$template\n%s\n" "$(date +%Y)" "$contributors" "$body" > "$file"
 done
