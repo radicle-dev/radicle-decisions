@@ -1,4 +1,4 @@
-// <project> is Copyright © {[-,0-9]+} {.+}
+// <project> is Copyright © {[-,0-9 ]+} {.+}
 //
 // This file is part of <project>, distributed under the GPL v3 with Radicle Linking Exception.
 // For full terms see the included LICENSE file.
